@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>TO DO LIST</h1>
+
+<ul>
+    {% for todo in todos %} {% if todo.important %}
+    <li>{{todo.title}}</li>
+    {% else %}
+    <li>{{todo.title}}</li>
+    {% endif %} {% endfor %}
+</ul>
+
+{% endblock %}
